@@ -64,7 +64,7 @@ class RewardsSystem:
 
           # Update items sold
           for purchase in items_purchased:
-            self.items_purchased[purchase.itemId] = self.items_purchased.get(purchase.itemId, 0) + purchase.item_price
+            self.items_purchased[purchase.itemId] = self.items_purchased.get(purchase.itemId, 0) + 1
 
           items_purchased = len(items_purchased) == 0
           if items_purchased:
@@ -83,7 +83,7 @@ class RewardsSystem:
 
         # Update items sold
         for purchase in items_purchased:
-          self.items_purchased[purchase.itemId] = self.items_purchased.get(purchase.itemId, 0) + purchase.item_price
+          self.items_purchased[purchase.itemId] = self.items_purchased.get(purchase.itemId, 0) + 1
 
         print(self.reward_points)
 
